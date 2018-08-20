@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="API tests" verbose="1">
+    <parameter name="domainName" value="http://localhost:8080/"/>
+    <parameter name="generatePlanEndpoint" value="generate-plan"/>
+    <parameter name="calcAnnuityEndpoint" value="calc-annuity"/>
+    <parameter name="loanAmount" value="5000"/>
+    <parameter name="nominalRate" value="5.0"/>
+    <parameter name="duration" value="24"/>
+    <parameter name="startDate" value="2018-01-25"/>
+    <test name="Test(s)">
+        <classes>
+            <class name="VerifyGeneratedPaymentPlan"/>
+        </classes>
+    </test>
+</suite>
